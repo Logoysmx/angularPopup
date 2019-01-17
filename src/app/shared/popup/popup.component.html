@@ -1,0 +1,16 @@
+<div class="popup-main" *ngIf="isShowed">
+	<div>
+		<div class="popup-main-content">
+			<div class=popup-header>
+				<h2 class="popup-title">{{ title }}</h2>
+				<span (click)="close()"></span>
+			</div>
+			<div class=popup-content>
+				<ng-content select=".content"></ng-content>
+			</div>
+			<div class=popup-footer>
+				<ng-content select=".footer"></ng-content>
+			</div>
+		</div>
+	</div>
+</div>

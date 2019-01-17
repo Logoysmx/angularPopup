@@ -1,0 +1,25 @@
+<div class="main-content">
+	<h1>Photos</h1>
+	<div 
+	*ngFor="let photo of photos" 	
+	(click)="showInfo(photo)"
+	class="content">{{ photo.title }}</div>
+</div>
+
+<div *ngIf="dataPhotos">
+	<div class="preview" (click)="tshowPopup()">
+		{{ dataPhotos.title }}
+		<br>
+		{{ dataPhotos.mainContent }}		
+	</div>	
+
+	<app-popup [title]="dataPhotos.title" [isShowed]="show" (isDisplayed)="show = $event">
+		<div class="content">
+			URL: {{ dataPhotos.url }}<br>
+			Photo id: {{ dataPhotos.id }}<br>
+			<img [src]="dataPhotos.thumbnailUrl">
+		</div>
+		<div class="footer">Album id: {{ dataPhotos.albumId }}</div>
+	</app-popup>
+</div>
+

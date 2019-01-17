@@ -1,0 +1,60 @@
+:host {
+	.popup-main {		
+		background-color: rgba(0, 0, 0, .5);
+		display: table;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		& > div{
+			&:first-child {
+				display: table-cell;
+				vertical-align: middle;				
+			}
+		}
+		.popup-header {
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			padding: .5rem;
+			font-size: 1.2rem;
+			position: relative;		
+			h2{
+				font-weight: normal;
+				font-size: 1.4rem;
+				margin: 0;
+				cursor: default;
+				color: #37474f;
+			}
+			span {
+				position: absolute;
+				top: 0;
+				right: .5rem;
+				font-size: 2rem;
+				cursor: pointer;
+				&::before{
+					content: "\00d7";
+				}
+				&:hover{
+					color: red;
+				}
+			}
+		}
+		.popup-main-content {			
+			background-color: #fff;
+			width: 500px;
+			margin: 0 auto;
+			border-radius: .2rem;
+			box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+		}
+		.popup-content {
+			padding: .5rem;
+			color: #888888;
+		}
+		.popup-footer {
+			padding: .5rem;
+			background-color: #eeeeee;
+			border-radius: 0 0 .2rem .2rem;
+			color: #646464;
+		}
+	}
+}
